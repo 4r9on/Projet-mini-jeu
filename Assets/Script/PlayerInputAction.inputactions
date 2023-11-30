@@ -1,0 +1,46 @@
+{
+    "name": "PlayerInputAction",
+    "maps": [
+        {
+            "name": "ManetteMouv",
+            "id": "95d3ea37-23e3-4d69-a3dc-0e452f766b32",
+            "actions": [
+                {
+                    "name": "PlayerManette",
+                    "type": "Button",
+                    "id": "1092fe00-915a-4605-92fb-c11e4ca7c45f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fb38682f-3c21-4c6c-ba75-fc1b0a0291ad",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "PlayerManette",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Mannetteboard",
+            "bindingGroup": "Mannetteboard",
+            "devices": [
+                {
+                    "devicePath": "<Joystick>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
