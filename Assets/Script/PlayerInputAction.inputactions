@@ -2,30 +2,96 @@
     "name": "PlayerInputAction",
     "maps": [
         {
-            "name": "ManetteMouv",
-            "id": "95d3ea37-23e3-4d69-a3dc-0e452f766b32",
+            "name": "MouvManette",
+            "id": "dd087cbb-c710-4442-8a23-4555f60145d8",
             "actions": [
                 {
-                    "name": "PlayerManette",
-                    "type": "Button",
-                    "id": "1092fe00-915a-4605-92fb-c11e4ca7c45f",
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "f9194d96-6ea4-408b-9a4b-28b2bc047272",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "fb38682f-3c21-4c6c-ba75-fc1b0a0291ad",
+                    "id": "c43957bb-14ac-4a5e-8fd9-c2499eea53df",
                     "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "Mannetteboard",
-                    "action": "PlayerManette",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "Horizontal",
+                    "id": "eb26177e-2a3e-4191-bd2b-b53a51681995",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "bdf94d23-7699-48f9-8f24-a7cdfe1cc988",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "78e6a10c-c173-466e-bde2-8c5353fb4e49",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Vertical",
+                    "id": "0808da4c-4b9d-4728-b40d-52017ca94f5a",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "6a49ef4d-5454-4e9f-b9e4-3b7b0ae7f3a8",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "8e6b78b8-b331-4ad0-b008-13d441a93369",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
@@ -36,7 +102,7 @@
             "bindingGroup": "Mannetteboard",
             "devices": [
                 {
-                    "devicePath": "<Joystick>",
+                    "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
                 }
