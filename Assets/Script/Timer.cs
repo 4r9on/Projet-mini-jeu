@@ -8,16 +8,27 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] float time;
 
-    private void Update()
+    private void FixedUpdate()
+    {
+        DownTimer();
+    }
+
+    public void DownTimer()
     {
         time -= Time.deltaTime;
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        if(time <= 0)
+        if (time <= 0)
         {
             timerText.color = Color.red;
         }
     }
+
+    public void UpTimer()
+    {
+
+    }
+
 }
