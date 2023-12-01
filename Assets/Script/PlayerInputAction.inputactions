@@ -2,13 +2,22 @@
     "name": "PlayerInputAction",
     "maps": [
         {
-            "name": "ManetteMouv",
-            "id": "95d3ea37-23e3-4d69-a3dc-0e452f766b32",
+            "name": "MouvManette",
+            "id": "dd087cbb-c710-4442-8a23-4555f60145d8",
             "actions": [
                 {
-                    "name": "PlayerManette",
+                    "name": "Mouv",
+                    "type": "Value",
+                    "id": "f9194d96-6ea4-408b-9a4b-28b2bc047272",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "GoGame",
                     "type": "Button",
-                    "id": "1092fe00-915a-4605-92fb-c11e4ca7c45f",
+                    "id": "4a96ecd8-ff93-45d8-8c30-8e8aad172185",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -18,12 +27,111 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "fb38682f-3c21-4c6c-ba75-fc1b0a0291ad",
-                    "path": "",
+                    "id": "c43957bb-14ac-4a5e-8fd9-c2499eea53df",
+                    "path": "<Gamepad>/leftStick/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "Mannetteboard",
-                    "action": "PlayerManette",
+                    "action": "Mouv",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Horizontal",
+                    "id": "eb26177e-2a3e-4191-bd2b-b53a51681995",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouv",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "bdf94d23-7699-48f9-8f24-a7cdfe1cc988",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "Mouv",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "78e6a10c-c173-466e-bde2-8c5353fb4e49",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "Mouv",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Vertical",
+                    "id": "0808da4c-4b9d-4728-b40d-52017ca94f5a",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouv",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "6a49ef4d-5454-4e9f-b9e4-3b7b0ae7f3a8",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "Mouv",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "8e6b78b8-b331-4ad0-b008-13d441a93369",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "Mouv",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b12ce567-a0e9-4aee-b5cf-167658dea78e",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "GoGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5032d404-bb26-4172-8c45-65532cac1a7d",
+                    "path": "<NimbusGamepadHid>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "GoGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd8467c6-69d2-434b-a7a6-4b63066316ff",
+                    "path": "<SwitchProControllerHID>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mannetteboard",
+                    "action": "GoGame",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -36,7 +144,7 @@
             "bindingGroup": "Mannetteboard",
             "devices": [
                 {
-                    "devicePath": "<Joystick>",
+                    "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
                 }

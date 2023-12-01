@@ -6,18 +6,29 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    float time;
+    [SerializeField] float time;
 
-    void Start()
+    private void FixedUpdate()
     {
-        
+        DownTimer();
     }
 
-    private void Update()
+    public void DownTimer()
     {
-        time = Time.deltaTime;
+        time -= Time.deltaTime;
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+        if (time <= 0)
+        {
+            timerText.color = Color.red;
+        }
+    }
+
+    public void UpTimer()
+    {
 
     }
+
 }
