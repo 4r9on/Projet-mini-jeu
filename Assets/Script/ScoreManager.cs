@@ -23,7 +23,7 @@ public class ScoreManager : MonoBehaviour
         sd.scores.Add(score);
     }
 
-    /*private void OnDestroy()
+    private void OnDestroy()
     {
         SaveScore();
     }
@@ -32,5 +32,5 @@ public class ScoreManager : MonoBehaviour
     {
         var json = JsonUtility.ToJson(sd);
         PlayerPrefs.SetString("scores", json);
-    }*/
+    }
 }
