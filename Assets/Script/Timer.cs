@@ -6,7 +6,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] float time;
+    public float time;
 
     private void FixedUpdate()
     {
@@ -23,6 +23,8 @@ public class Timer : MonoBehaviour
         if (time <= 0)
         {
             timerText.color = Color.red;
+            time = 0;
+            //SetActive
         }
     }
 
