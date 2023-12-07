@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GemCollect : MonoBehaviour
 {
-    public string[] allowedColors;  // Tableau des couleurs que le joueur peut collecter
+    public string[] allowedColors;  
 
     void OnTriggerEnter(Collider other)
     {
@@ -13,7 +13,6 @@ public class GemCollect : MonoBehaviour
             Gem gem = other.GetComponent<Gem>();
             if (gem != null && IsColorAllowed(gem.color))
             {
-                // Le joueur a collecté la gemme correcte
                 Destroy(other.gameObject);
             }
         }

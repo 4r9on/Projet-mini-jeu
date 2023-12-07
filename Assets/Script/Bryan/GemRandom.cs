@@ -6,7 +6,7 @@ public class GemRandom : MonoBehaviour
 {
     public GameObject[] gemPrefabs;
     public float spawnRate = 2f;
-    public float spawnAreaWidth = 10f; // Largeur de la zone de spawn
+    public float spawnAreaWidth = 10f;
 
     void Start()
     {
@@ -18,8 +18,9 @@ public class GemRandom : MonoBehaviour
         int randomGemIndex = Random.Range(0, gemPrefabs.Length);
         GameObject gemPrefab = gemPrefabs[randomGemIndex];
 
-        float randomX = Random.Range(-spawnAreaWidth / 2, spawnAreaWidth / 2); // Ajustement pour la zone carrée
-        Vector3 spawnPosition = new Vector3(randomX, 7f, 0f);
+        float randomX = Random.Range(-spawnAreaWidth / 2, spawnAreaWidth / 2);
+        float randomZ = Random.Range(-spawnAreaWidth / 2, spawnAreaWidth / 2); 
+        Vector3 spawnPosition = new Vector3(randomX, 7f, randomZ);
 
         Instantiate(gemPrefab, spawnPosition, Quaternion.identity);
     }
