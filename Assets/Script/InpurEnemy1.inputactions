@@ -1,1 +1,118 @@
-{}
+{
+    "name": "InpurEnemy1",
+    "maps": [
+        {
+            "name": "play",
+            "id": "37e2f902-1821-42b5-9c7b-ccb16dd2bbce",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "20d8b960-15f5-4e8e-8499-6a4f92261336",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ae1ae686-68ad-4e34-b087-c65ed5cb37e7",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "enemy1",
+            "id": "c9bcbb78-e909-46a8-b9ef-1a5807f8d732",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "9439c6fc-3d25-4430-a6ac-785115393157",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "908f1be7-5635-429c-9427-2dfe5ae5a70f",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "enemy2",
+            "id": "3e8ce208-1cff-431d-9a08-0547723532a4",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "94dc4188-9bb2-427e-abef-4b6e2be6e1e9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "354201d8-b7d1-4e9b-92ff-fb0f2e280702",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "enemy3",
+            "id": "40ed4f41-c83d-4393-a738-f4453586cfa8",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "0336d3a7-2567-4df0-b46c-d880e97c0145",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "99a05ef5-acf5-48c4-ba44-2f856dd99d9c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
