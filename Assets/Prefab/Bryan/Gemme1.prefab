@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1487835361341757078}
   m_Layer: 0
   m_Name: Gemme1
-  m_TagString: Untagged
+  m_TagString: Gem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a7891a50f3c98ee4198961c8ae9b7bba, type: 2}
+  - {fileID: 2100000, guid: 6a4b321cd7fe6164bb172d0b1cdabaf0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

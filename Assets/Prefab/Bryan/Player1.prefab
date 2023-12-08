@@ -105,9 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7225e08e4c40965478940e9d76fa1a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 2
-  jumpHeight: 1
-  gravityValue: -9.81
+  playerSpeed: 7
 --- !u!23 &7625790533951660374
 MeshRenderer:
   m_ObjectHideFlags: 0
