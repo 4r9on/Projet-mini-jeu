@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,26 +7,18 @@ using UnityEngine.InputSystem;
 public class MovePlayer : MonoBehaviour
 {
     public float speed;
-    public Rigidbody body;
+    public Rigidbody2D body;
     public float rotateSpeed;
-    private bool canTurnLeft;
-    private bool canTurnRight;
+    public bool canTurnLeft;
+    public bool canTurnRight;
+
     [SerializeField]
-    private InputActionReference actionLeft;
-    [SerializeField]
-    private InputActionReference actionRight;
+    private int playerIndex = 0;
 
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
+        //deplacement auto en fonction de la vitesse
         body.velocity = transform.up * speed;
         if (canTurnLeft)
         {
@@ -41,43 +34,8 @@ public class MovePlayer : MonoBehaviour
         }  
     }
 
-    public void OnMoveRight(InputAction.CallbackContext value)
+    public int GetPlayerIndex()
     {
-
-        if (value.started)
-        {
-            Debug.Log("started");
-            canTurnRight = true;
-        }
-        if (value.performed)
-        {
-            Debug.Log("perform");
-            canTurnRight = true;
-        }
-        if (value.canceled)
-
-        {
-            Debug.Log("cancel");
-            canTurnRight = false;
-        }
-    }
-    public void OnMoveLeft(InputAction.CallbackContext value)
-    {
-        if (value.started)
-        {
-            Debug.Log("started");
-            canTurnLeft = true;
-        }
-        if (value.performed)
-        {
-            Debug.Log("perform");
-            canTurnLeft = true;
-        }
-        if (value.canceled)
-
-        {
-            Debug.Log("cancel");
-            canTurnLeft = false;
-        }
+        return playerIndex;
     }
 }

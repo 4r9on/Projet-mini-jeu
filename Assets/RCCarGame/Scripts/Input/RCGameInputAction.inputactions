@@ -2,18 +2,9 @@
     "name": "RCGameInputAction",
     "maps": [
         {
-            "name": "Player1",
+            "name": "Player",
             "id": "6a6af7fa-fd1a-4e4c-9441-79384e85abb5",
             "actions": [
-                {
-                    "name": "Movement",
-                    "type": "Value",
-                    "id": "60cb19f4-998e-4bcf-a04d-a56cca540a8c",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
                 {
                     "name": "MoveLeft",
                     "type": "Button",
@@ -31,75 +22,18 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SpawningInput",
+                    "type": "Button",
+                    "id": "d46fe405-bd4c-459f-9032-a6c25b227ff8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "b81df4d6-b69d-4785-a46e-34d41fb877fa",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "69075d94-ff3c-43ec-8d5c-f351d7f51b7f",
-                    "path": "azerty",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "df5463d6-b793-499a-a42b-1965e1242822",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "405815b3-8d3d-4b64-822e-b6351b6c2b09",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "9f52ddb9-b43c-41c3-b985-d1c550c8f2f7",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "53820877-9162-44b2-97e4-62f804a3ced7",
-                    "path": "<Keyboard>/space",
-                    "interactions": "Hold",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "9cda2102-5c9e-4bcc-b75a-61a30fd54826",
@@ -143,187 +77,26 @@
                     "action": "MoveRight",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Player2",
-            "id": "53698576-3762-43ff-b500-8309cc2e9dc2",
-            "actions": [
-                {
-                    "name": "Movement",
-                    "type": "Button",
-                    "id": "ac31089e-f2a6-444b-96d0-8e943d3b7d06",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "3bb2bda1-ec69-4302-983d-f7cd55e6dc1b",
-                    "path": "<Keyboard>/r",
+                    "id": "0505efd2-7e64-4f14-b985-ac9d6a495415",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyBoard",
-                    "action": "Movement",
+                    "groups": "",
+                    "action": "SpawningInput",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "f77ee312-0c3c-4d00-87f7-cd5a7e0f4fe4",
-                    "path": "<Keyboard>/t",
+                    "id": "ce06542d-cca8-474a-b9c5-138ccf4573f1",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyBoard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "00c6a18f-f8cc-490c-a9f9-7a78c084d6c6",
-                    "path": "<Gamepad>/leftStick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3f2bf318-feef-45da-aafb-442107c10b3b",
-                    "path": "<Gamepad>/leftStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Player3",
-            "id": "c0865f48-3d90-4038-a11b-ee4051e84e69",
-            "actions": [
-                {
-                    "name": "Movement",
-                    "type": "Button",
-                    "id": "ae80dd3f-635c-4116-a175-24893d6bde27",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "09d899ef-ef50-4e61-8ff7-cedf2466a824",
-                    "path": "<Keyboard>/u",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyBoard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1960a139-6f68-42e3-81e0-26505228f5a1",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyBoard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b39a6d79-8719-4e3e-a221-3681918b311c",
-                    "path": "<Gamepad>/leftStick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1ad53b1a-29d9-412b-8a4f-8d288fd4f04e",
-                    "path": "<Gamepad>/leftStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Player4",
-            "id": "06b7a5b4-ba5d-48ea-9b28-110d1da29a8c",
-            "actions": [
-                {
-                    "name": "Movement",
-                    "type": "Button",
-                    "id": "af621c32-cb77-4527-9e25-5a81f9afffff",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "d15905d7-49b7-4006-9c6b-eae161d2da0b",
-                    "path": "<Keyboard>/p",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyBoard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1f3ee637-710a-4249-999c-0a8196038bde",
-                    "path": "<Keyboard>/leftBracket",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyBoard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7cd035a4-c597-4420-b8e1-1051a2b1726c",
-                    "path": "<Gamepad>/leftStick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7ef9f90a-4e93-49d0-a71c-cca8d009225d",
-                    "path": "<Gamepad>/leftStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Movement",
+                    "groups": "",
+                    "action": "SpawningInput",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -337,7 +110,7 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
-                    "isOptional": true,
+                    "isOptional": false,
                     "isOR": false
                 }
             ]
@@ -348,18 +121,7 @@
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
-                    "isOptional": true,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "New control scheme",
-            "bindingGroup": "New control scheme",
-            "devices": [
-                {
-                    "devicePath": "<HumiditySensor>",
-                    "isOptional": true,
+                    "isOptional": false,
                     "isOR": false
                 }
             ]
