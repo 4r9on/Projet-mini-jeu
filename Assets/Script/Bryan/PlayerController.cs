@@ -5,7 +5,10 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private float playerSpeed = 2.0f;
+    private float playerSpeed = 7.0f;
+    [SerializeField]
+
+    private float playerRotation = 7.0f;
 
     private CharacterController controller;
     private Vector3 playerVelocity;
@@ -29,6 +32,14 @@ public class PlayerController : MonoBehaviour
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
+        }
+
+        if (movementInput != Vector2.zero)
+        {
+            float targetAngle = Mathf.Atan2(playerVelocity.x, playerVelocity.z) * Mathf.Rad2Deg;
+
+            float angle = Mathf.LerpAngle(transform.eulerAngles.y, targetAngle, playerRotation * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
         }
 
         Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
