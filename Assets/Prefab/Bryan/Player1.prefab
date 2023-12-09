@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 7
+  playerRotation: 7
 --- !u!23 &7625790533951660374
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -163,12 +164,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.61180604
+  m_Center: {x: 0.027176857, y: -0.067791164, z: -0.0055133104}
 --- !u!114 &4386353009836347662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2e139017e7a8d4484bc0ef10c394b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowedColors: []
+  allowedColors:
+  - Yellow
 --- !u!143 &6129407045525542267
 CharacterController:
   m_ObjectHideFlags: 0
@@ -233,5 +235,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0

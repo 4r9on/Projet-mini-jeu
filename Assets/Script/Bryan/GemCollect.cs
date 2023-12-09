@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GemCollect : MonoBehaviour
 {
-    public string[] allowedColors;  
+    public string[] allowedColors;
+    ScoreManager sm;
+    Score score;
 
     void OnTriggerEnter(Collider other)
     {
@@ -13,8 +15,10 @@ public class GemCollect : MonoBehaviour
             Gem gem = other.GetComponent<Gem>();
             if (gem != null && IsColorAllowed(gem.color))
             {
-                Destroy(other.gameObject);
+                sm.AddScore(score);
             }
+            Destroy(other.gameObject);
+            sm.AddScore(score);
         }
     }
 
