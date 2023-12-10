@@ -91,31 +91,19 @@ MonoBehaviour:
     m_ActionId: 07186e14-a0a2-4222-a1a3-c262968bf05f
     m_ActionName: Player1/MoveRightP1[/Keyboard/w,/DualShock4GamepadHID/leftStick/right]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bc093673-22f7-4174-97b7-e20e729bd4a1
-    m_ActionName: Player2/MoveLeftP2[/Keyboard/r]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: aaf82f19-a146-4d3a-a337-edee54d26c4a
-    m_ActionName: Player2/MoveRightP2[/Keyboard/t]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 49c43991-39f7-4a9a-bc9f-55214e9904b9
-    m_ActionName: Player3/MoveRightP3[/Keyboard/i]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: dac1ddfb-71f2-4501-9c16-aed77d39f3ef
-    m_ActionName: Player3/MoveLeftP3[/Keyboard/u]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2d25fa1e-7fd2-45b4-865d-44336689a6ee
-    m_ActionName: Player4/MoveLeftP4[/Keyboard/semicolon]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7b3c8e4a-6b78-481f-b46d-0cc027828377
-    m_ActionName: Player4/MoveRightP4[/Keyboard/quote]
-  - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3103022877514246749}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnSpawningInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d46fe405-bd4c-459f-9032-a6c25b227ff8
     m_ActionName: Player/SpawningInput[/XInputControllerWindows/buttonSouth,/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
@@ -135,3 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52aca193e805c8f4cb4f8db22d1600e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 4352539886153976902, guid: ecb6c464b728cd544a5cbcb299c75ed6, type: 3}

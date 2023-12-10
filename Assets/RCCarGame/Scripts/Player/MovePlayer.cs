@@ -11,7 +11,12 @@ public class MovePlayer : MonoBehaviour
     public float rotateSpeed;
     public bool canTurnLeft;
     public bool canTurnRight;
+    public GameObject imgPressButton;
+    public GameObject imgPressedButton;
 
+
+
+    [Header("Variable a modifier, Player1 = 0")]
     [SerializeField]
     private int playerIndex = 0;
 
@@ -31,8 +36,17 @@ public class MovePlayer : MonoBehaviour
         else
         {
             return;
-        }  
+        }
     }
+
+
+    public void ButtonPressed()
+    {
+        Debug.Log("button press");
+        imgPressButton.SetActive(false);
+        imgPressedButton.SetActive(true);
+    }
+
 
     public int GetPlayerIndex()
     {

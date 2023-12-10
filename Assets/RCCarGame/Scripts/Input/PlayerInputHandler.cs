@@ -11,6 +11,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     private PlayerInput playerInput;
     private MovePlayer movePlayer;
+    public TimerStart timer;
+
 
 
 
@@ -20,6 +22,18 @@ public class PlayerInputHandler : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         var movers = FindObjectsOfType<MovePlayer>();
         movePlayer = movers.FirstOrDefault(m => m.GetPlayerIndex() == playerInput.playerIndex);
+    }
+
+
+    public void OnSpawningInput(InputAction.CallbackContext value)
+    {
+        if (movePlayer != null)
+        {
+            if (value.started)
+            {
+                movePlayer.ButtonPressed();
+            }
+        }
     }
 
     public void OnMoveRight(InputAction.CallbackContext value)
