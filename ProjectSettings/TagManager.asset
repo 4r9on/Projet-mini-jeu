@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - floor
-  - aaaa
-  - Player1
-  - Player2
-  - End
+  - Enemy
+  - Gem
   layers:
   - Default
   - TransparentFX

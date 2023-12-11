@@ -215,6 +215,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1320608262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3240886851875496607, guid: 6e7cc0172fbaa2344afffcb44f2adc3e, type: 3}
+  m_PrefabInstance: {fileID: 7962793174362769080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1551304795
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,10 +502,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1578314258}
     m_Modifications:
+    - target: {fileID: 303186261684372442, guid: 6e7cc0172fbaa2344afffcb44f2adc3e, type: 3}
+      propertyPath: m_RebindOverlay
+      value: 
+      objectReference: {fileID: 1320608262}
     - target: {fileID: 1779256309096604212, guid: 6e7cc0172fbaa2344afffcb44f2adc3e, type: 3}
       propertyPath: m_Name
       value: PanelBindingRaceGame
       objectReference: {fileID: 0}
+    - target: {fileID: 4119972607318926582, guid: 6e7cc0172fbaa2344afffcb44f2adc3e, type: 3}
+      propertyPath: m_RebindOverlay
+      value: 
+      objectReference: {fileID: 1320608262}
     - target: {fileID: 5639036303972210514, guid: 6e7cc0172fbaa2344afffcb44f2adc3e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
