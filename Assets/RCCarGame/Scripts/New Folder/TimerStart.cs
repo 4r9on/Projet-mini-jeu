@@ -7,6 +7,7 @@ public class TimerStart : MonoBehaviour
     public Activated activated;
     public GameObject start;
     public GameObject playButton;
+    public GameObject timer;
     public GameObject three;
     public GameObject two;
     public GameObject one;
@@ -49,5 +50,7 @@ public class TimerStart : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         Time.timeScale = 1;
         start.SetActive(false);
+        timer.SetActive(true);
+
     }
 }
