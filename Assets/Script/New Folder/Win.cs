@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
@@ -9,33 +11,45 @@ public class Win : MonoBehaviour
     public GameObject Win3;
     public GameObject Win4;
 
+    public TextMeshProUGUI winner;
+
+    public Leaderboard leaderboard;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Capsule (1)")
+        if(collision.gameObject.tag == "Player1")
         {
-            Win1.SetActive(true);
-            Debug.Log("aaaaaa");
+            SceneManager.LoadScene("Board", LoadSceneMode.Additive);
+
+            winner.text = "Player 1";
+           // leaderboard.score = 5;
+
+            
         }
-        if (collision.gameObject.name == "Capsule (2)")
+        if (collision.gameObject.tag == "Player2")
         {
-            Win2.SetActive(true);
+            SceneManager.LoadScene("Board", LoadSceneMode.Additive);
+
+            winner.text = "Player 2";
+            //leaderboard.score = 5;
+
+
         }
         if (collision.gameObject.tag == "Player3")
         {
-            Win3.SetActive(true);
+            SceneManager.LoadScene("Board", LoadSceneMode.Additive);
+
+            winner.text = "Player 3";
+//leaderboard.score = 5;
+
         }
         if (collision.gameObject.tag == "Player4")
         {
-            Win4.SetActive(true);
-        }
-    }
+            SceneManager.LoadScene("Board", LoadSceneMode.Additive);
 
-    public void Quit()
-    {
-        Win1.SetActive(false);
-        Win2.SetActive(false);
-        Win3.SetActive(false);
-        Win4.SetActive(false);
+            winner.text = "Player 4";
+            //leaderboard.score = 5;
+
+        }
     }
 }

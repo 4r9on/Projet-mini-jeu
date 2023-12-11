@@ -8,6 +8,7 @@ TagManager:
   - aaaa
   - Player1
   - Player2
+  - End
   layers:
   - Default
   - TransparentFX

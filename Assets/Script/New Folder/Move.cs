@@ -58,4 +58,12 @@ public class Move : MonoBehaviour
         jumpIs = context.action.triggered;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Win")
+        {
+            Debug.Log("zzzzzzz");
+        }
+    }
+
 }
