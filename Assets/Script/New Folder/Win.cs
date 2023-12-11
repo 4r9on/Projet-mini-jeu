@@ -24,7 +24,7 @@ public class Win : MonoBehaviour
             SceneManager.LoadScene(SceneName);
 
             winner.text = "Player 1";
-           // leaderboard.score = 5;
+            leaderboard.score = 5;
 
             
         }
@@ -34,7 +34,7 @@ public class Win : MonoBehaviour
 
 
             winner.text = "Player 2";
-            //leaderboard.score = 5;
+            leaderboard.score = 5;
 
 
         }
@@ -44,7 +44,7 @@ public class Win : MonoBehaviour
 
 
             winner.text = "Player 3";
-            //leaderboard.score = 5;
+            leaderboard.score = 5;
 
         }
         if (collision.gameObject.tag == "Player4")
@@ -53,7 +53,7 @@ public class Win : MonoBehaviour
 
 
             winner.text = "Player 4";
-            //leaderboard.score = 5;
+            leaderboard.score = 5;
 
         }
     }

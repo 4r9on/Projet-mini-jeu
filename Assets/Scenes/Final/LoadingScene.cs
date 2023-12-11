@@ -13,15 +13,15 @@ public class LoadingScene : MonoBehaviour
     public string SceneName4;
 
 
-    /*public void LoadGame1()
+    public void LoadGame1()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene(SceneName1);
     }
 
     public void LoadGame2()
     {
-        SceneManager.LoadScene("");
-    }*/
+        SceneManager.LoadScene(SceneName2); 
+    }
 
     public void LoadGame3()
     {

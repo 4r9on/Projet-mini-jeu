@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Enemy
   - Gem
+  - floor
+  - End
+  - aaaa
+  - Player1
+  - Player2
+  - Player4
+  - Player3
   layers:
   - Default
   - TransparentFX
