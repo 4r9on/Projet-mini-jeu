@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,26 +7,23 @@ using UnityEngine.InputSystem;
 public class MovePlayer : MonoBehaviour
 {
     public float speed;
-    public Rigidbody body;
+    public Rigidbody2D body;
     public float rotateSpeed;
-    private bool canTurnLeft;
-    private bool canTurnRight;
+    public bool canTurnLeft;
+    public bool canTurnRight;
+    public GameObject imgPressButton;
+    public GameObject imgPressedButton;
+
+
+
+    [Header("Variable a modifier, Player1 = 0")]
     [SerializeField]
-    private InputActionReference actionLeft;
-    [SerializeField]
-    private InputActionReference actionRight;
+    private int playerIndex = 0;
 
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
+        //deplacement auto en fonction de la vitesse
         body.velocity = transform.up * speed;
         if (canTurnLeft)
         {
@@ -38,46 +36,20 @@ public class MovePlayer : MonoBehaviour
         else
         {
             return;
-        }  
-    }
-
-    public void OnMoveRight(InputAction.CallbackContext value)
-    {
-
-        if (value.started)
-        {
-            Debug.Log("started");
-            canTurnRight = true;
-        }
-        if (value.performed)
-        {
-            Debug.Log("perform");
-            canTurnRight = true;
-        }
-        if (value.canceled)
-
-        {
-            Debug.Log("cancel");
-            canTurnRight = false;
         }
     }
-    public void OnMoveLeft(InputAction.CallbackContext value)
-    {
-        if (value.started)
-        {
-            Debug.Log("started");
-            canTurnLeft = true;
-        }
-        if (value.performed)
-        {
-            Debug.Log("perform");
-            canTurnLeft = true;
-        }
-        if (value.canceled)
 
-        {
-            Debug.Log("cancel");
-            canTurnLeft = false;
-        }
+
+    public void ButtonPressed()
+    {
+        Debug.Log("button press");
+        imgPressButton.SetActive(false);
+        imgPressedButton.SetActive(true);
+    }
+
+
+    public int GetPlayerIndex()
+    {
+        return playerIndex;
     }
 }
