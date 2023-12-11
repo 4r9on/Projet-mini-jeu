@@ -8,6 +8,9 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     public float time;
 
+    public GameObject interfaceWin;
+    public GameObject interfaceGame;
+
     private void FixedUpdate()
     {
         DownTimer();
@@ -24,7 +27,9 @@ public class Timer : MonoBehaviour
         {
             timerText.color = Color.red;
             time = 0;
-            //SetActive
+            Time.timeScale = 0;
+            interfaceWin.SetActive(true);
+            interfaceGame.SetActive(false);
         }
     }
 

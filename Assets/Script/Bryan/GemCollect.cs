@@ -6,13 +6,14 @@ using TMPro;
 public class GemCollect : MonoBehaviour
 {
     public string rightColors; // Bonne couleur à ramasser pour gain de score (couleur du player)
-    int score = 0; // Score du player
+    public int score = 0; // Score du player
     public TMP_Text scoreText; // Affichage du score du player
     public GameObject interfaceText;
 
     public void Awake()
     {
         interfaceText.SetActive(true);
+        Time.timeScale = 1;
     }
 
     void OnTriggerEnter(Collider other)
