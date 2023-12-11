@@ -12,12 +12,13 @@ public class Leaderboard : MonoBehaviour
     public List<TextMeshProUGUI> scores;
 
 
-    public string publicLeaderboardKey = "6f8045ee6c564361e0e0ee2a631b7cce4d9128b2a49527b2dee21db6b740f4d0";
+    private string publicLeaderboardKey = "6f8045ee6c564361e0e0ee2a631b7cce4d9128b2a49527b2dee21db6b740f4d0";
 
     public void GetLeaderboard()
     {
         LeaderboardCreator.GetLeaderboard(publicLeaderboardKey, ((msg) =>
         {
+
             for (int i = 0; i < names.Count; ++i)
             {
                 names[i].text = msg[i].Username;
