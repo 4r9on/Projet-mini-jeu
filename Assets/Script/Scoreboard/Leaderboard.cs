@@ -8,7 +8,7 @@ using System.Linq;
 public class Leaderboard : MonoBehaviour
 {
     //Lien du tuto : https://www.youtube.com/watch?v=-O7zeq7xMLw
-   /* [SerializeField] private List<TextMeshProUGUI> names;
+   [SerializeField] private List<TextMeshProUGUI> names;
     public List<TextMeshProUGUI> scores;
 
 
@@ -18,8 +18,7 @@ public class Leaderboard : MonoBehaviour
     {
         LeaderboardCreator.GetLeaderboard(publicLeaderboardKey, ((msg) =>
         {
-            int loopLenght = (msg.Length < name.Count) ? msg.Length : name.Count;
-            for (int i = 0; i < loopLenght; ++i)
+            for (int i = 0; i < names.Count; ++i)
             {
                 names[i].text = msg[i].Username;
                 scores[i].text = msg[1].Score.ToString();
@@ -35,5 +34,5 @@ public class Leaderboard : MonoBehaviour
             
             GetLeaderboard();
         }));
-    }*/
+    }
 }
