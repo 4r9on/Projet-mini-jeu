@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GemCollect : MonoBehaviour
 {
-    public string[] allowedColors;
+    public string rightColors; // Bonne couleur à ramasser pour gain de score (couleur du player)
     ScoreManager sm;
     Score score;
 
@@ -13,24 +13,23 @@ public class GemCollect : MonoBehaviour
         if (other.CompareTag("Gem"))
         {
             Gem gem = other.GetComponent<Gem>();
-            if (gem != null && IsColorAllowed(gem.color))
+
+            if (gem != null && IsColorAllowed(gem.color)) 
             {
-                sm.AddScore(score);
+                sm.AddScore(score); // Ajoute un point au score si c'est une gemme et si elle est de la même couleur
             }
             Destroy(other.gameObject);
             sm.AddScore(score);
         }
     }
 
-    bool IsColorAllowed(string gemColor)
+    bool IsColorAllowed(string gemColor) // Vérification si la gemme est de la même couleur que le player
     {
-        foreach (string allowedColor in allowedColors)
-        {
-            if (gemColor == allowedColor)
+        
+            if (gemColor == rightColors)
             {
                 return true;
             }
-        }
         return false;
     }
 }

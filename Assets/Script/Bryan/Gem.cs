@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Gem : MonoBehaviour
 {
-    public string color = "Red";
+    public string color = "Red"; // couleur de la gemme
 }
