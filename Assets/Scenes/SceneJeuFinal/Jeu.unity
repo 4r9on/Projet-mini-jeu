@@ -526,7 +526,7 @@ MonoBehaviour:
   window: {fileID: 1075122535}
   camera1: {fileID: 639697131}
   camera2: {fileID: 709294486}
-  camera3: {fileID: 639697131}
+  camera3: {fileID: 1139834065}
 --- !u!1 &158184300
 GameObject:
   m_ObjectHideFlags: 0
