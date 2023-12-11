@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GemCollect : MonoBehaviour
 {
     public string rightColors; // Bonne couleur à ramasser pour gain de score (couleur du player)
-    ScoreManager sm;
-    Score score;
+    int score = 0; // Score du player
+    public TMP_Text scoreText; // Affichage du score du player
+    public GameObject interfaceText;
+
+    public void Awake()
+    {
+        interfaceText.SetActive(true);
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -16,10 +23,14 @@ public class GemCollect : MonoBehaviour
 
             if (gem != null && IsColorAllowed(gem.color)) 
             {
-                sm.AddScore(score); // Ajoute un point au score si c'est une gemme et si elle est de la même couleur
+                score++; // Ajoute un point au score si c'est une gemme et si elle est de la même couleur
             }
-            Destroy(other.gameObject);
-            sm.AddScore(score);
+            else
+            {
+                score--; // Enlève un point si le joueur ramasse la mauvaise gemme
+            }
+            Destroy(other.gameObject);           
+            scoreText.text = "" + score;
         }
     }
 

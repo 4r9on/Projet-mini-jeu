@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitouanScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/RCCarGame/Scene/RCCarGame.unity
+    guid: 0e7f1725cb6a2bd42a103f3e6ce857f0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0efc306589193b44693261b19b4b4019, type: 2}
